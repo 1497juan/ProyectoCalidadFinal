@@ -1,0 +1,24 @@
+<div class="col-md-4 offset-md-4">
+    <div class="card">
+        <div class="card-header">
+            <h1>Crear membresia</h1>
+        </div>
+        <div class="card-body">
+            <form>
+                <div class="form-group">
+                    <input type="text" name="tipoLonchera" [(ngModel)]="membresia.tipo_lonchera"
+                        placeholder="Tipo de lonchera" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="cantidadLoncheras" [(ngModel)]="membresia.cantidad_lonchera"
+                        placeholder="Cantidad de loncheras" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="text" [(ngModel)]="membresia.costo" name="costo" placeholder="Costo membresia"
+                        class="form-control">
+                </div>
+                <button class="btn btn-success btn-block" (click)="nuevaMembresia()">Crear membresia</button>
+            </form>
+        </div>
+    </div>
+</div>

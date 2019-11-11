@@ -1,0 +1,30 @@
+<div class="col-md-4 offset-md-4">
+        <div class="card">
+            <div class="card-header">
+                <h1>Registro de Hijo</h1>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <input type="text" name="ti" [(ngModel)]="hijo.ti" placeholder="T.I." class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="nombre"  [(ngModel)]="hijo.nombre" placeholder="Nombre" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="hijo.apellido" name="apellido" placeholder="Apellido" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="alergia" [(ngModel)]="hijo.alergia" placeholder="Alergias" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="direccion" [(ngModel)]="hijo.direccion" placeholder="Direccion de residencía" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="telefono" [(ngModel)]="hijo.telefono" placeholder="Telefono de Contacto" class="form-control">
+                    </div>
+                    <button class="btn btn-success btn-block" (click)="crearHijo()">Registrar Hijo</button>
+                </form>
+            </div>
+        </div>
+    </div>

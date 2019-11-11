@@ -1,0 +1,27 @@
+<div class="col-md-4 offset-md-4">
+        <div class="card">
+            <div class="card-header">
+                <h1>Registro de producto</h1>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <input type="text" name="nombre"  [(ngModel)]="producto.nombre_producto" placeholder="Nombre" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="producto.fecha_vencimiento" name="Fecha Vencimiento" placeholder="Fecha de Vencimiento" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="precio" [(ngModel)]="producto.precio" placeholder="Precio" class="form-control">
+                    </div>
+                    <div class="form-group">
+                            <input type="text" [(ngModel)]="producto.descripcion" name="Descripcion" placeholder="Descripcion" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="Imagen" [(ngModel)]="producto.imagen_producto" placeholder="Url imagen" class="form-control">
+                        </div>
+                   <button class="btn btn-success btn-block" (click)="crearProducto()">Crear</button>
+                </form>
+            </div>
+        </div>
+    </div>
