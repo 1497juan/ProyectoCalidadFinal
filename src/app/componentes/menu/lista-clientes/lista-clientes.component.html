@@ -35,7 +35,7 @@
 
                     <ng-container matColumnDef="dhijos">
                         <th mat-header-cell *matHeaderCellDef> Ver hijos </th>
-                        <td mat-cell *matCellDef="let element"> Ver hijos </td>
+                        <td mat-cell matTooltip="Info about the action" (click)="listahijo(element)" routerLink *matCellDef="let element"> Ver hijos </td>
                     </ng-container>
 
                     <ng-container matColumnDef="opciones">
