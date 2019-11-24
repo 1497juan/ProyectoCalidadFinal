@@ -10,11 +10,13 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./lista-hijos.component.css']
 })
 export class ListaHijosComponent implements OnInit {
+
   hijos: any;
   id: string;
-  columsToDisplay = ['id','ti', 'nombre', 'direccion', 'telefono', 'membresia', 'opciones']
+  columsToDisplay = ['id', 'ti', 'nombre', 'direccion', 'telefono', 'membresia', 'opciones']
   dataSource: MatTableDataSource<hijo>;
   membresia: any;
+
   constructor(
     private serviciosService: ServiciosService,
     private route: ActivatedRoute,

@@ -1,1 +1,50 @@
-<p>lista-membresias works!</p>
+<div class="col-md-8 offset-md-2">
+    <div class="card">
+        <div class="card-body">
+            <div>
+                <h1>Lista de Membresias</h1>
+            </div>
+            <div>
+                <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+                    <ng-container matColumnDef="id">
+                        <th mat-header-cell *matHeaderCellDef>ID Membresia</th>
+                        <td mat-cell *matCellDef="let element"> {{element.id_membresia}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="nombre">
+                        <th mat-header-cell *matHeaderCellDef>Nombre Membresia</th>
+                        <td mat-cell *matCellDef="let element"> {{element.tipo_lonchera}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="numero">
+                        <th mat-header-cell *matHeaderCellDef>Numero de Productos </th>
+                        <td mat-cell *matCellDef="let element"> {{element.numeroProductos}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="costo">
+                        <th mat-header-cell *matHeaderCellDef> Costo Membresia </th>
+                        <td mat-cell *matCellDef="let element"> {{element.costo}} $ </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="cantidad">
+                        <th mat-header-cell *matHeaderCellDef>Cantidad de Loncheras </th>
+                        <td mat-cell *matCellDef="let element"> {{element.cantidad_lonchera}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="opciones">
+                        <th mat-header-cell *matHeaderCellDef> Opciones </th>
+                        <td mat-cell *matCellDef="let element">
+                            <button matTooltip="Eliminar Hijo" (click)="eliminarMembresia(element.id_membresia)">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                        </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="columsToDisplay"></tr>
+                    <tr mat-row *matRowDef="let row; columns: columsToDisplay;"></tr>
+                </table>
+            </div> <br>
+        </div>
+    </div>
+</div>
