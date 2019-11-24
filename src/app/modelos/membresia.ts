@@ -3,5 +3,6 @@ export class membresia {
     tipo_lonchera: string;
     cantidad_lonchera: number;
     costo: number;
+    numeroProductos: number;
     id_lonchera: number;
 }

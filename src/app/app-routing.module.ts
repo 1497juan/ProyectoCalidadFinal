@@ -10,6 +10,9 @@ import { RegistroProveedorComponent } from './componentes/menu/registro-proveedo
 import { ListaHijosComponent } from './componentes/menu/lista-hijos/lista-hijos.component';
 import { ListaProductosComponent } from './componentes/menu/lista-productos/lista-productos.component';
 import { ListaProveedoresComponent } from './componentes/menu/lista-proveedores/lista-proveedores.component';
+import { ListaHijosClienteComponent } from './componentes/menu/lista-hijos-cliente/lista-hijos-cliente.component';
+import { ListaProductosProveedorComponent } from './componentes/menu/lista-productos-proveedor/lista-productos-proveedor.component';
+import { ListaMembresiasComponent } from './componentes/menu/lista-membresias/lista-membresias.component';
 
 
 const routes: Routes = [
@@ -17,13 +20,17 @@ const routes: Routes = [
   { path: 'login', component: IngresarComponent },
   { path: 'listaClientes', component: ListaClientesComponent },
   { path: 'registroCliente', component: RegistroclienteComponent },
-  { path: 'registroHijo', component: RegistroHijoComponent },
   { path: 'registroMembresia', component: RegistroMembresiaComponent },
-  { path: 'registroProducto', component: RegistroProductoComponent },
   { path: 'registroProveedor', component: RegistroProveedorComponent },
   { path: 'listaHijos', component: ListaHijosComponent },
   { path: 'listaProductos', component: ListaProductosComponent },
   { path: 'listaProveedores', component: ListaProveedoresComponent },
+  { path: 'listaMembresias', component: ListaMembresiasComponent },
+  { path: 'listaClientes/:id_cliente/listaHijos', component: ListaHijosClienteComponent },
+  { path: 'ingresar/:id_cliente/listaHijos', component: ListaHijosClienteComponent },
+  { path: 'listaProveedores/:id_proveedor/listaProductos', component: ListaProductosProveedorComponent },
+  { path: 'listaHijosCliente/:id/registroHijo', component: RegistroHijoComponent },
+  { path: 'listaProveedores/:id_proveedor/registroProducto', component: RegistroProductoComponent },
 
 ];
 

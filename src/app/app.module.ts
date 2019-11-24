@@ -9,9 +9,9 @@ import { MenuComponent } from './componentes/menu/menu.component';
 import { IngresarComponent } from './componentes/ingresar/ingresar.component';
 import { ServiciosService } from './servicios/servicios.service'
 import { HttpClientModule } from '@angular/common/http';
-import { MatInputModule, MatButtonModule, MatSelectModule, MatIconModule, MatDialogRef, MatDialog } from '@angular/material';
+import { MatInputModule, MatButtonModule, MatSelectModule, MatIconModule, MatDialogRef, MatDialog, MatRadioModule, MatTooltipModule, MatListModule } from '@angular/material';
 import { FormsModule } from '@angular/forms';
-import {MatTableModule} from '@angular/material/table';
+import { MatTableModule } from '@angular/material/table';
 import { RegistroHijoComponent } from './componentes/menu/registro-hijo/registro-hijo.component';
 import { RegistroMembresiaComponent } from './componentes/menu/registro-membresia/registro-membresia.component';
 import { RegistroProveedorComponent } from './componentes/menu/registro-proveedor/registro-proveedor.component';
@@ -21,6 +21,7 @@ import { ListaProveedoresComponent } from './componentes/menu/lista-proveedores/
 import { ListaProductosComponent } from './componentes/menu/lista-productos/lista-productos.component';
 import { ListaHijosClienteComponent } from './componentes/menu/lista-hijos-cliente/lista-hijos-cliente.component';
 import { ListaProductosProveedorComponent } from './componentes/menu/lista-productos-proveedor/lista-productos-proveedor.component';
+import { ListaMembresiasComponent } from './componentes/menu/lista-membresias/lista-membresias.component';
 
 
 @NgModule({
@@ -38,19 +39,24 @@ import { ListaProductosProveedorComponent } from './componentes/menu/lista-produ
     ListaProveedoresComponent,
     ListaProductosComponent,
     ListaHijosClienteComponent,
-    ListaProductosProveedorComponent
+    ListaProductosProveedorComponent,
+    ListaMembresiasComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    FormsModule,    
-    MatInputModule, 
+    FormsModule,
+    MatInputModule,
     MatButtonModule,
     MatSelectModule,
     MatIconModule,
-    MatTableModule
+    MatTableModule,
+    MatRadioModule,
+    MatTooltipModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [
     ServiciosService

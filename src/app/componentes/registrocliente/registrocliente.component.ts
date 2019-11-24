@@ -15,7 +15,7 @@ export class RegistroclienteComponent implements OnInit {
     apellido: '',
     correo: '',
     contrasena: '',
-    numero_hijos: null
+    numero_hijos: 0
   };
 
   constructor(
@@ -26,7 +26,7 @@ export class RegistroclienteComponent implements OnInit {
   }
 
   crearCliente() {
-    console.log(this.cliente)
+    // console.log(this.cliente)
     this.serviciosservice.guardarCliente(this.cliente).subscribe(
       respuesta => {
         alert("Cliente creado correctamente.");

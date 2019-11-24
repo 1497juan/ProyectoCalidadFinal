@@ -23,7 +23,7 @@ export class RegistroProveedorComponent implements OnInit {
   }
 
   crearProveedor() {
-    console.log(this.proveedor)
+    // console.log(this.proveedor)
     this.serviciosservice.guardarProveedor(this.proveedor).subscribe(
       respuesta => {
         alert("Proveedor creado correctamente.");

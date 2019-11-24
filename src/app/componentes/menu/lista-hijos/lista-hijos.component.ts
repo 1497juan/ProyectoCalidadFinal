@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material';
 import { hijo } from 'src/app/modelos/hijo';
 import { ServiciosService } from 'src/app/servicios/servicios.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-lista-hijos',
@@ -9,23 +10,47 @@ import { ServiciosService } from 'src/app/servicios/servicios.service';
   styleUrls: ['./lista-hijos.component.css']
 })
 export class ListaHijosComponent implements OnInit {
- hijos: any;
- columsToDisplay = ['id_hijo','ti','nombre','apellido','alergia','direccion','telefono','opciones']
- dataSource: MatTableDataSource<hijo>; 
- constructor(
-   private serviciosService: ServiciosService
- ) { }
+  hijos: any;
+  id: string;
+  columsToDisplay = ['id','ti', 'nombre', 'direccion', 'telefono', 'membresia', 'opciones']
+  dataSource: MatTableDataSource<hijo>;
+  membresia: any;
+  constructor(
+    private serviciosService: ServiciosService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) { }
 
   ngOnInit() {
+
     this.obtenerHijos();
+    this.listaMembresias();
   }
 
-  obtenerHijos(){
+  obtenerHijos() {
     this.serviciosService.listarHijos().subscribe(
       hijo => {
-        console.log(hijo)
+        // console.log(hijo)
         this.hijos = hijo;
         this.dataSource = new MatTableDataSource<hijo>(this.hijos);
+      }
+    )
+  }
+
+  listaMembresias() {
+    this.serviciosService.listaMembresias().subscribe(
+      membresia => {
+        this.membresia = membresia;
+        //console.log(this.membresia)
+      }
+    )
+  }
+
+  eliminarHijo(id_hijo) {
+    this.serviciosService.eliminarHijo(id_hijo).subscribe(
+      res => {
+        // console.log(res);
+        this.obtenerHijos();
       }
     )
   }

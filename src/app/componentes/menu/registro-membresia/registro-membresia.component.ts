@@ -13,6 +13,7 @@ export class RegistroMembresiaComponent implements OnInit {
     tipo_lonchera: '',
     cantidad_lonchera: null,
     costo: null,
+    numeroProductos: null,
     id_lonchera: 0
   };
   constructor(
@@ -22,7 +23,7 @@ export class RegistroMembresiaComponent implements OnInit {
   ngOnInit() {
   }
   nuevaMembresia() {
-    console.log(this.membresia)
+    // console.log(this.membresia)
     this.serviciosService.guardarMembresia(this.membresia).subscribe(
       respuesta => {
         alert("Nueva membresia creada correctamente.");

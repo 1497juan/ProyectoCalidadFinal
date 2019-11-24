@@ -1,57 +1,74 @@
 <div class="col-md-8 offset-md-2">
-        <div class="card">
-            <div class="card-body">
-                <div>
-                    <h1>Lista de Hijos</h1>
-                </div>
-                <div>
-                    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-    
-    
-                        <ng-container matColumnDef="id_hijo">
-                            <th mat-header-cell *matHeaderCellDef> ID </th>
-                            <td mat-cell *matCellDef="let element"> {{element.id_hijo}} </td>
-                        </ng-container>
+    <div class="card">
+        <div class="card-body">
+            <div>
+                <h1>Lista de Hijos</h1>
+            </div>
+            <div>
+                <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-                        <ng-container matColumnDef="ti">
-                                <th mat-header-cell *matHeaderCellDef> T.I. </th>
-                                <td mat-cell *matCellDef="let element"> {{element.ti}} </td>
-                            </ng-container>
-        
-                        <ng-container matColumnDef="nombre">
-                            <th mat-header-cell *matHeaderCellDef> Nombre </th>
-                            <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
-                        </ng-container>
-    
-                        <ng-container matColumnDef="apellido">
-                            <th mat-header-cell *matHeaderCellDef> Apellido </th>
-                            <td mat-cell *matCellDef="let element"> {{element.apellido}} </td>
-                        </ng-container>
-    
-                        <ng-container matColumnDef="alergia">
-                            <th mat-header-cell *matHeaderCellDef> Alergias </th>
-                            <td mat-cell *matCellDef="let element"> {{element.alergia}} </td>
-                        </ng-container>
-    
-                        <ng-container matColumnDef="direccion">
-                            <th mat-header-cell *matHeaderCellDef> Direccion Residencia </th>
-                            <td mat-cell *matCellDef="let element"> {{element.direccion}} </td>
-                        </ng-container>
-    
-                        <ng-container matColumnDef="telefono">
-                            <th mat-header-cell *matHeaderCellDef> Telefono </th>
-                            <td mat-cell *matCellDef="let element"> {{element.telefono}} </td>
-                        </ng-container>
-    
-                        <ng-container matColumnDef="opciones">
-                            <th mat-header-cell *matHeaderCellDef> Opciones </th>
-                            <td mat-cell *matCellDef="let element"> opciones </td>
-                        </ng-container>
-    
-                        <tr mat-header-row *matHeaderRowDef="columsToDisplay"></tr>
-                        <tr mat-row *matRowDef="let row; columns: columsToDisplay;"></tr>
-                    </table>
-                </div>
+                    <ng-container matColumnDef="id">
+                        <th mat-header-cell *matHeaderCellDef>ID Cliente</th>
+                        <td mat-cell *matCellDef="let element"> {{element.id_cliente}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="ti">
+                        <th mat-header-cell *matHeaderCellDef> Tarjeta de Identidad</th>
+                        <td mat-cell *matCellDef="let element"> {{element.ti}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="nombre">
+                        <th mat-header-cell *matHeaderCellDef> Nombre </th>
+                        <td mat-cell *matCellDef="let element"> {{element.nombre}} {{element.apellido}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="direccion">
+                        <th mat-header-cell *matHeaderCellDef> Dirección </th>
+                        <td mat-cell *matCellDef="let element"> {{element.direccion}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="telefono">
+                        <th mat-header-cell *matHeaderCellDef> Telefono </th>
+                        <td mat-cell *matCellDef="let element"> {{element.telefono}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="membresia">
+                        <th mat-header-cell *matHeaderCellDef> Membresia </th>
+                        <td mat-cell *matCellDef="let element"> {{element.id_membresia}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="opciones">
+                        <th mat-header-cell *matHeaderCellDef> Opciones </th>
+                        <td mat-cell *matCellDef="let element">
+                            <button matTooltip="Eliminar Hijo" (click)="eliminarHijo(element.id_hijo)">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                            <button matTooltip="Ver Lonchera">
+                                <mat-icon>business_center</mat-icon>
+                            </button>
+                            <button matTooltip="Crear nueva Lonchera">
+                                <mat-icon>enhanced_encryption</mat-icon>
+                            </button>
+                        </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="columsToDisplay"></tr>
+                    <tr mat-row *matRowDef="let row; columns: columsToDisplay;"></tr>
+                </table>
+            </div> <br>
+            <div>
+                <mat-list>
+                    <h3 mat-subheader>Lista de Membresias</h3>
+                    <mat-list-item *ngFor="let m of membresia">
+                        <mat-icon mat-list-icon>add_shopping_cart</mat-icon>
+                        <h4 mat-line>{{m.id_membresia}}. {{m.tipo_lonchera}}</h4>
+                        <p mat-line>precio: {{m.costo}} $ </p>
+                        <p mat-line>cantidad de loncheras: {{m.cantidad_lonchera}} unidades</p>
+                        <p mat-line>productos por lonchera: {{m.numeroProductos}}</p>
+                    </mat-list-item>
+                </mat-list>
             </div>
         </div>
     </div>
+
+</div>

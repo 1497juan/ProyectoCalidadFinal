@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 import { ServiciosService } from 'src/app/servicios/servicios.service';
 
 @Component({
@@ -8,6 +8,8 @@ import { ServiciosService } from 'src/app/servicios/servicios.service';
 })
 export class ListaProductosComponent implements OnInit {
   productos: any;
+  @HostBinding('class') classes = "row";
+
   constructor(
     private serviciosService: ServiciosService) { }
 
@@ -19,8 +21,16 @@ export class ListaProductosComponent implements OnInit {
     this.serviciosService.listarProductos().subscribe(
       producto => {
         this.productos = producto;
-        console.log(this.productos)
+       // console.log(this.productos)
       }
     )
   }
+
+  // eliminarProducto(id_producto) {
+  //   this.serviciosService.eliminarProducto(id_producto).subscribe(men => {
+  //     alert("El producto " + id_producto + " fue correctamente eliminado.")
+  //     this.obtenerProductos();
+  //   }
+  //   );
+  // }
 }
