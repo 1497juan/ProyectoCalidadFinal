@@ -1,5 +1,6 @@
 import { Component, OnInit, ChangeDetectorRef, OnDestroy } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
+import { cliente } from 'src/app/modelos/cliente';
 
 @Component({
   selector: 'app-menu',
@@ -9,7 +10,8 @@ import { MediaMatcher } from '@angular/cdk/layout';
 export class MenuComponent implements OnInit {
 
   mobileQuery: MediaQueryList;
-
+  shouldRun = true;
+  usuario: any;
   // fillerNav = Array.from({ length: 50 }, (_, i) => `Nav Item ${i + 1}`);
   fillerNav = [
     { name: "Registrar Cliente", route: "/registroCliente" },
@@ -35,10 +37,20 @@ export class MenuComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('Me ejecute')
+    this.obtenerLocalStorge();
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
 
-  shouldRun = true;
+  obtenerLocalStorge() {
+    this.usuario = JSON.parse(localStorage.getItem("persona"));
+    // console.log(this.usuario)
+  }
+
+  cerrarSesion() {
+    let persona: object = [];
+    localStorage.setItem("persona", JSON.stringify(persona));
+    alert("Hasta pronto!!")
+    this.shouldRun = false;
+  }
 }
 

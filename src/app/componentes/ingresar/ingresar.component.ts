@@ -16,7 +16,9 @@ export class IngresarComponent implements OnInit {
   constructor(
     private serviciosService: ServiciosService,
     private router: Router
-  ) { }
+  ) {
+    this.guardarLocalSorage(this.cuenta);
+  }
 
   ngOnInit() {
   }
@@ -26,6 +28,7 @@ export class IngresarComponent implements OnInit {
       cuenta => {
         if (cuenta) {
           this.cuenta = cuenta;
+          this.guardarLocalSorage(this.cuenta);
           alert("Bienvenido " + cuenta[0].nombre + "!!");
           if (cuenta[0].nombre != "admin") {
             this.listahijo(cuenta[0].id_cliente);
@@ -42,6 +45,10 @@ export class IngresarComponent implements OnInit {
   }
   listaClientes() {
     this.router.navigate(["/listaClientes"])
+  }
+  guardarLocalSorage(usuario) {
+    console.log(usuario)
+    localStorage.setItem("persona", JSON.stringify(usuario))
   }
 
 }
