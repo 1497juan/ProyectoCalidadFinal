@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ListaClientesComponent } from './componentes/menu/lista-clientes/lista-clientes.component';
+import { ListaClientesComponent } from './componentes/lista-clientes/lista-clientes.component';
 import { IngresarComponent } from './componentes/ingresar/ingresar.component';
 import { RegistroclienteComponent } from './componentes/registrocliente/registrocliente.component';
-import { RegistroHijoComponent } from './componentes/menu/registro-hijo/registro-hijo.component';
-import { RegistroMembresiaComponent } from './componentes/menu/registro-membresia/registro-membresia.component';
-import { RegistroProductoComponent } from './componentes/menu/registro-producto/registro-producto.component';
-import { RegistroProveedorComponent } from './componentes/menu/registro-proveedor/registro-proveedor.component';
-import { ListaHijosComponent } from './componentes/menu/lista-hijos/lista-hijos.component';
-import { ListaProductosComponent } from './componentes/menu/lista-productos/lista-productos.component';
-import { ListaProveedoresComponent } from './componentes/menu/lista-proveedores/lista-proveedores.component';
-import { ListaHijosClienteComponent } from './componentes/menu/lista-hijos-cliente/lista-hijos-cliente.component';
-import { ListaProductosProveedorComponent } from './componentes/menu/lista-productos-proveedor/lista-productos-proveedor.component';
-import { ListaMembresiasComponent } from './componentes/menu/lista-membresias/lista-membresias.component';
+import { RegistroHijoComponent } from './componentes/registro-hijo/registro-hijo.component';
+import { RegistroMembresiaComponent } from './componentes/registro-membresia/registro-membresia.component';
+import { RegistroProductoComponent } from './componentes/registro-producto/registro-producto.component';
+import { RegistroProveedorComponent } from './componentes/registro-proveedor/registro-proveedor.component';
+import { ListaHijosComponent } from './componentes/lista-hijos/lista-hijos.component';
+import { ListaProductosComponent } from './componentes/lista-productos/lista-productos.component';
+import { ListaProveedoresComponent } from './componentes/lista-proveedores/lista-proveedores.component';
+import { ListaHijosClienteComponent } from './componentes/lista-hijos-cliente/lista-hijos-cliente.component';
+import { ListaProductosProveedorComponent } from './componentes/lista-productos-proveedor/lista-productos-proveedor.component';
+import { ListaMembresiasComponent } from './componentes/lista-membresias/lista-membresias.component';
 
 
 const routes: Routes = [
