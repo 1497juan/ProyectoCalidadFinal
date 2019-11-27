@@ -47,7 +47,7 @@ export class IngresarComponent implements OnInit {
     this.router.navigate(["/listaClientes"])
   }
   guardarLocalSorage(usuario) {
-    console.log(usuario)
+    // console.log(usuario)
     localStorage.setItem("persona", JSON.stringify(usuario))
   }
 
