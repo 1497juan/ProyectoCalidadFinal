@@ -1,0 +1,47 @@
+[33mcommit 50e87efd77783c74058bb67bc07a0ddcc398f2fa[m[33m ([m[1;36mHEAD -> [m[1;32mpruebas[m[33m, [m[1;31morigin/pruebas[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Author: Juanse <1497juan@gmail.com>
+Date:   Tue Nov 26 23:19:48 2019 -0500
+
+    Ajustes enu, admin y cliente.
+
+[33mcommit b6d84fc73c12b61471cf6bd481de80e762b7137b[m
+Author: Juanse <1497juan@gmail.com>
+Date:   Sun Nov 24 22:51:36 2019 -0500
+
+    Cerrar sesion.
+
+[33mcommit 5620aeff274b7963d425ed2e81be7ff1a307a376[m
+Author: Juanse <1497juan@gmail.com>
+Date:   Sun Nov 24 20:41:18 2019 -0500
+
+    Ajustes del menu global, en proceso.
+
+[33mcommit da9fd6590d1eb3e75cf216a03c0b26b1568b8644[m
+Author: Juanse <1497juan@gmail.com>
+Date:   Sun Nov 24 01:36:49 2019 -0500
+
+    Creación tabla y funciones membresias.
+
+[33mcommit 0905fc6eea0228cf41da1b5676324c8bc2a6c9b1[m
+Author: Juanse <1497juan@gmail.com>
+Date:   Sun Nov 24 01:20:02 2019 -0500
+
+    Ajustes y nuevos com´ponentes ceados.
+
+[33mcommit 6845ca2398bf22b36d5afb23d4dfe9bb9213e698[m
+Author: Juanse <1497juan@gmail.com>
+Date:   Mon Nov 18 08:26:36 2019 -0500
+
+    Ajustes
+
+[33mcommit 0c0163354d8d1954b272e8e94aaf5a061fd9a61a[m
+Author: Juanse <1497juan@gmail.com>
+Date:   Mon Nov 11 11:02:48 2019 -0500
+
+    Creación FrontEnd e integración Backend, consumo primeros servicios.
+
+[33mcommit cbea61a5f6c94e007e9c37d5ccba58f8b24a1ae4[m
+Author: Juanse <1497juan@gmail.com>
+Date:   Sun Nov 10 21:43:57 2019 -0500
+
+    Creación e integracion FrontEnd
