@@ -48,6 +48,11 @@ export class ListaHijosComponent implements OnInit {
     )
   }
 
+  verLonchera(id_hijo) {
+    // console.log(id_hijo)
+    this.router.navigate(["listaHijosCliente", id_hijo, 'loncheraHijo'])
+  }
+
   eliminarHijo(id_hijo) {
     this.serviciosService.eliminarHijo(id_hijo).subscribe(
       res => {

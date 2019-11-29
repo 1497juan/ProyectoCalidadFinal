@@ -16,7 +16,7 @@ export class RegistroHijoComponent implements OnInit {
     ti: '',
     nombre: '',
     apellido: '',
-    alergia: '',
+    alergia: 'ninguna',
     direccion: '',
     telefono: '',
     id_cliente: 0,

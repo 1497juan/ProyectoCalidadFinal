@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { proveedor } from 'src/app/modelos/proveedor';
 import { ServiciosService } from 'src/app/servicios/servicios.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registro-proveedor',
@@ -16,7 +17,8 @@ export class RegistroProveedorComponent implements OnInit {
     telefono: ''
   }
   constructor(
-    private serviciosservice: ServiciosService 
+    private serviciosservice: ServiciosService,
+    private router: Router 
   ) { }
 
   ngOnInit() {
@@ -27,6 +29,7 @@ export class RegistroProveedorComponent implements OnInit {
     this.serviciosservice.guardarProveedor(this.proveedor).subscribe(
       respuesta => {
         alert("Proveedor creado correctamente.");
+        this.router.navigate(["/listaProveedores"])
       }
     );
   }

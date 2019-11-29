@@ -38,10 +38,11 @@
                             <button matTooltip="Eliminar Hijo" (click)="eliminarHijo(element.id_hijo)">
                                 <mat-icon>delete</mat-icon>
                             </button>
-                            <button matTooltip="Ver Lonchera">
+                            <button matTooltip="Ver Lonchera" (click)="verLonchera(element.id_hijo)">
                                 <mat-icon>business_center</mat-icon>
                             </button>
-                            <button matTooltip="Crear nueva Lonchera">
+                            <button matTooltip="Crear nueva Lonchera"
+                                (click)="crearLonchera(element.id_hijo, element.id_membresia)">
                                 <mat-icon>enhanced_encryption</mat-icon>
                             </button>
                         </td>

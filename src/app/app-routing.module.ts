@@ -13,6 +13,8 @@ import { ListaProveedoresComponent } from './componentes/lista-proveedores/lista
 import { ListaHijosClienteComponent } from './componentes/lista-hijos-cliente/lista-hijos-cliente.component';
 import { ListaProductosProveedorComponent } from './componentes/lista-productos-proveedor/lista-productos-proveedor.component';
 import { ListaMembresiasComponent } from './componentes/lista-membresias/lista-membresias.component';
+import { NuevaLoncheraComponent } from './componentes/nueva-lonchera/nueva-lonchera.component';
+import { LoncheraHijoComponent } from './componentes/lonchera-hijo/lonchera-hijo.component';
 
 
 const routes: Routes = [
@@ -31,7 +33,8 @@ const routes: Routes = [
   { path: 'listaProveedores/:id_proveedor/listaProductos', component: ListaProductosProveedorComponent },
   { path: 'listaHijosCliente/:id/registroHijo', component: RegistroHijoComponent },
   { path: 'listaProveedores/:id_proveedor/registroProducto', component: RegistroProductoComponent },
-
+  { path: 'listaHijosCliente/:id/:id_membresia/nuevaLonchera', component: NuevaLoncheraComponent },
+  { path: 'listaHijosCliente/:id/loncheraHijo', component: LoncheraHijoComponent }
 ];
 
 @NgModule({

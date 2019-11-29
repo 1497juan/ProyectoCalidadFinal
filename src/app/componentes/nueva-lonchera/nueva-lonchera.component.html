@@ -1,0 +1,26 @@
+<div class="col-md-4 offset-md-4">
+    <div class="card">
+        <div class="card-header">
+            <h1>Crear Lonchera</h1>
+        </div>
+        <h5>Cantidad de productos a guardar: {{lonchera.cantidad_producto}}</h5>
+        <div class="card-body">
+            <form>
+                <label style="color: red;">Ingresa el id seguido de coma(,) para agregar los productos a tu
+                    lonchera</label>
+                <div class="form-group">
+                    <input type="text" [(ngModel)]="lonchera.lista_productos" name="lista_productos"
+                        placeholder="Productos" class="form-control">
+                </div>
+            </form>
+        </div>
+        <div>
+            <form>
+                <button class="btn btn-success btn-block" (click)="crearLonchera()">Crear Lonchera</button>
+            </form>
+        </div>
+    </div>
+</div>
+<div>
+    <app-lista-productos></app-lista-productos>
+</div>

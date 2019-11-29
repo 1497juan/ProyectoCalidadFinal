@@ -61,6 +61,16 @@ export class ListaHijosClienteComponent implements OnInit {
     )
   }
 
+  verLonchera(id_hijo) {
+    // console.log(id_hijo)
+    this.router.navigate(["listaHijosCliente", id_hijo, 'loncheraHijo'])
+  }
+
+  crearLonchera(id_hijo, id_membresia) {
+    // console.log(id_hijo)
+    this.router.navigate(["listaHijosCliente", id_hijo, id_membresia, 'nuevaLonchera'])
+  }
+
   nuevoHijo() {
     // console.log(this.id)
     this.router.navigate(["/listaHijosCliente", this.id, 'registroHijo']);

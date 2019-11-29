@@ -22,6 +22,8 @@ import { ListaProductosComponent } from './componentes/lista-productos/lista-pro
 import { ListaHijosClienteComponent } from './componentes/lista-hijos-cliente/lista-hijos-cliente.component';
 import { ListaProductosProveedorComponent } from './componentes/lista-productos-proveedor/lista-productos-proveedor.component';
 import { ListaMembresiasComponent } from './componentes/lista-membresias/lista-membresias.component';
+import { LoncheraHijoComponent } from './componentes/lonchera-hijo/lonchera-hijo.component';
+import { NuevaLoncheraComponent } from './componentes/nueva-lonchera/nueva-lonchera.component';
 
 
 @NgModule({
@@ -40,7 +42,9 @@ import { ListaMembresiasComponent } from './componentes/lista-membresias/lista-m
     ListaProductosComponent,
     ListaHijosClienteComponent,
     ListaProductosProveedorComponent,
-    ListaMembresiasComponent
+    ListaMembresiasComponent,
+    LoncheraHijoComponent,
+    NuevaLoncheraComponent
   ],
   imports: [
     BrowserModule,

@@ -40,13 +40,9 @@ export class ServiciosService {
   listaMembresias() {
     return this.http.get(`${this.url}/membresias`)
   }
-
+  //USANDO
   loncheraHijoEspecifico(id_hijo) {
     return this.http.get(`${this.url}/lonchera/hijo/${id_hijo}`)
-  }
-
-  listaProductosLonchera(id_lonchera) {
-    return this.http.get(`${this.url}/producto/lonchera/${id_lonchera}`)
   }
 
   listaMembresiasProductos(id_membresia) {
@@ -57,6 +53,9 @@ export class ServiciosService {
     return this.http.get(`${this.url}/signin/${correo}/${contrasena}`)
   }
 
+  informacionMembresia(id_membresia: string) {
+    return this.http.get(`${this.url}/membresia/numeroProducto/${id_membresia}`)
+  }
   //USANDO
   buscarHijosCliente(idCliente: string) {
     return this.http.get(`${this.url}/cliente/hijo/${idCliente}`)
@@ -93,6 +92,11 @@ export class ServiciosService {
     return this.http.post(`${this.url}/registroProducto`, producto)
   }
 
+  //USANDO
+  listaProductosLonchera(id_producto) {
+    return this.http.get(`${this.url}/producto/${id_producto}`)
+  }
+  //USANDO
   guardarLonchera(lonchera) {
     return this.http.post(`${this.url}/registroLonchera`, lonchera)
   }
